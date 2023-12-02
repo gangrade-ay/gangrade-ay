@@ -13,6 +13,7 @@ You can click the Preview link to take a look at your changes.
 
 Nextcloud Docker Server config (Basic) with mysql backend running with memory optimization for low memory usage requirement:
 docker network create nextcloud_network
+
 docker run -d \
   --cpus="1" \
   --memory=1GB \
