@@ -26,3 +26,9 @@ docker run -d \
 docker run -d --name mysql_nextcloud --network nextcloud_network -p 3306:3306 -e MYSQL_ROOT_PASSWORD=ROOT_Password -e MYSQL_DATABASE=nextcloud -e MYSQL_USER=nextcloud_user -e MYSQL_PASSWORD=PASSWORD --cpus=1 --memory=512MB --memory-swap=512MB mysql:latest --performance_schema=off --innodb_buffer_pool_size=5m --max_connections=5 --sort_buffer_size=2m --key_buffer_size=8m --innodb_log_buffer_size=256K --innodb_sort_buffer_size=64K --thread_cache_size=0 --host_cache_size=0 --thread_stack=128k --tmp_table_size=16M
 
 /// Attention - Change mysql root and user password before starting docker
+
+get_final_url.gs
+function Fetch_url(url) {
+  var response = UrlFetchApp.fetch(url, {followRedirects: false});
+  return response.getHeaders()['Location'];
+}
